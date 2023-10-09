@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;700&family=Pacifico&display=swap');
+:root{
+    --primary:purple;
+    --primary-son:rgb(180, 7, 180);
+    --secundary:seagreen;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: var(--primary);;
+}
+.padronizando{
+    display: inline-flex;
+    background:var(--secundary);
+    width: 90%;
+    height: 100vh;
+    margin: 0 5% 0 0;
+    padding: 0 auto;
+}
+.title-site{
+    font-family: 'Dancing Script';
+    font-size: 8em;
+    color: var(--primary);;
+}
+.lateral{
+    display: inline-flex;
+    width: 5%;
+    height: 100vh;
+}
+.config{
+    width: 100%;
+    height: 5%;
+    aspect-ratio: 3/3;
+    background: var(--primary);
+    border: 0;
+    border-radius: 50%;
+}
+.config img {
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    border: solid 3px var(--secundary);
+    color: var(--secundary);
+    border-radius: 50%;
+}
+img ~ a.config:hover{
+    background: var(--primary-son);
+    
+}
