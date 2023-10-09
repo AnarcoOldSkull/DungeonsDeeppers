@@ -17,6 +17,12 @@ document.addEventListener('keyup',function (event){
     if(event.key === "d"){
         moveu_leste();
     }
+    if(event.key === "m"){
+        acessar_mapa();
+    }
+    if(event.key === "i"){
+        acessar_inventario();
+    }
 }) ;
 
 function moveu_oeste(){
@@ -30,4 +36,19 @@ function moveu_norte(){
 }
 function moveu_leste(){
     alert("moveu leste");
+}
+function acessar_mapa(){
+
+    for(i=0;i<20;i++){
+        for(j=0;j<20;j++){
+            document.getElementById("apresentation").innerHTML += criaElementoDiv(i,j);
+            
+        }
+    }
+}
+function criaElementoDiv(eixox,eixoy){
+    return `<div class="grindando" id="position${eixox}-${eixoy}">${eixox}|${eixoy}</div>`;
+}
+function acessar_inventario(){
+    alert("Acessou o inventario");
 }
