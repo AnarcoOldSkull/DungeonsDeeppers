@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;700&family=Pacifico&display=swap');
+:root{
+    --primary:purple;
+    --primary-son:rgb(180, 7, 180);
+    --secundary:seagreen;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: var(--primary);;
+}
+.padronizando{
+    display: inline-flex;
+    background:var(--secundary);
+    width: 90vw;
+    height: 100vh;
+    margin: 0 5%;
+    padding: 0 auto;
+}
+.headerizando{
+    display: flex;
+    position: relative;
+    width: 90vw;
+    height: 20vh;
+    margin-left: 5%;
+    justify-content: center;
+}
+.title-site{
+    font-family: 'Dancing Script';
+    font-size: 8em;
+    color: var(--primary);;
+}
+.lateral{
+    display: inline-flex;
+    position:absolute;
+    left: 0;
+    width: 5%;
+    height: 100vh;
+}
+.config{
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    top: 0;
+    left: 0;
+    aspect-ratio: 3/3;
+    background: var(--primary);
+    border: 0;
+    border-radius: 50%;
+}
+.config img {
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    border: solid 3px var(--secundary);
+    color: var(--secundary);
+    border-radius: 50%;
+}
+img ~ a.config:hover{
+    background: var(--primary-son);
+    
+}
+.apresentation{
+    display: flex;
+    position:absolute;
+    top: 20vh;
+    width: 80vw;
+    height: 60%;
+    margin-left: 5%;
+    border: solid 3px var(--primary);
+}
+.grindando{
+    display: grid;
+    grid-template-areas: "0|0 0|1 0|2 0|3 0|4 0|5 0|6 0|7 0|8 0|9 0|10 0|11 0|12 0|13 0|14 0|15 0|16 0|17 0|18 0|19"
+                         "1|0 1|1 1|2 1|3 1|4 1|5 1|6 1|7 1|8 1|9 1|10 1|11 1|12 1|13 1|14 1|15 1|16 1|17 1|18 1|19"
+                         "2|0 2|1 2|2 2|3 2|4 2|5 2|6 2|7 2|8 2|9 2|10 2|11 2|12 2|13 2|14 2|15 2|16 2|17 2|18 2|19"
+                         "3|0 3|1 3|2 3|3 3|4 3|5 3|6 3|7 3|8 3|9 3|10 3|11 3|12 3|13 3|14 3|15 3|16 3|17 3|18 3|19"
+                         "4|0 4|1 4|2 4|3 4|4 4|5 4|6 4|7 4|8 4|9 4|10 4|11 4|12 4|13 4|14 4|15 4|16 4|17 4|18 4|19";
+    /*
+    grid-template-columns: repeat(20, 5%);
+    grid-template-rows: repeat(20, 50px);
+    */
+    grid-column-gap: 0px;
+    border: solid 1px var(--primary);
+    border-collapse: collapse;
+}
