@@ -65,9 +65,27 @@ img ~ a.config:hover{
 .apresentation{
     display: flex;
     position:absolute;
+    color: var(--primary);
+    justify-content: center;
+    text-align: center;
+    font-size: 1.4em;
     top: 20vh;
     width: 80vw;
     height: 60%;
+    margin-left: 5%;
+    border: solid 3px var(--primary);
+}
+#possibilidades{
+    display: grid;
+    position: absolute;
+    color: var(--primary);
+    grid-template-areas: " w w "
+                         " a d "                        
+                         " a d "                        
+                         " s s ";
+    top: 80vh;
+    width: 80vw;
+    height: 15%;
     margin-left: 5%;
     border: solid 3px var(--primary);
 }
