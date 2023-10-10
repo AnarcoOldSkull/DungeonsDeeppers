@@ -1,20 +1,28 @@
+let posicao=[Number(0),Number(0)];
+
+import("./map.js")
 function configuration(){
         alert("entrando");
 }
+/*
+*
+*Key binds
+*
+*/
 document.addEventListener('keyup',function (event){
     if(event.key === "Escape"){
         configuration();
     }
-    if(event.key === "a"){
+    if(event.key === "a" || event.key==="ArrowLeft"){
         moveu_oeste();
     }
-    if(event.key === "s"){
+    if(event.key === "s" || event.key==="ArrowDown"){
         moveu_sul();
     }
-    if(event.key === "w"){
+    if(event.key === "w" || event.key==="ArrowUp"){
         moveu_norte();
     }
-    if(event.key === "d"){
+    if(event.key === "d" || event.key==="ArrowRight"){
         moveu_leste();
     }
     if(event.key === "m"){
@@ -23,32 +31,85 @@ document.addEventListener('keyup',function (event){
     if(event.key === "i"){
         acessar_inventario();
     }
+    if(event.key === "c"){
+        acessar_personagem();
+    }
 }) ;
 
-function moveu_oeste(){
-    alert("moveu oeste");
-}
-function moveu_sul(){
-    alert("moveu sul");
-}
-function moveu_norte(){
-    alert("moveu norte");
-}
-function moveu_leste(){
-    alert("moveu leste");
-}
-function acessar_mapa(){
 
-    for(i=0;i<20;i++){
-        for(j=0;j<20;j++){
-            document.getElementById("apresentation").innerHTML += criaElementoDiv(i,j);
-            
-        }
-    }
+function limpa_apresentation(){
+    document.getElementById("apresentation").innerHTML="";
 }
+
 function criaElementoDiv(eixox,eixoy){
     return `<div class="grindando" id="position${eixox}-${eixoy}">${eixox}|${eixoy}</div>`;
 }
+/*
+*
+*Movimentation Functions
+*
+*/
+function moveu_oeste(){
+    limpa_apresentation();
+    posicao[1]--;
+}
+function moveu_sul(){
+    limpa_apresentation();
+    posicao[0]++;
+}
+function moveu_norte(){
+    limpa_apresentation();
+    posicao[0]--;
+}
+function moveu_leste(){
+    limpa_apresentation();
+    posicao[1]++;
+}
+/*
+*
+*Inventary Functions
+*
+*/
+function ativaInventario(){
+    limpa_apresentation();
+    document.getElementById("apresentation").style.display="flex";
+}
 function acessar_inventario(){
-    alert("Acessou o inventario");
+    ativaInventario();
+}
+
+/*
+*
+*Map Functions
+*
+*/
+function ativaMapa(){
+    limpa_apresentation();
+    document.getElementById("apresentation").style.display="grid";
+    document.getElementById("apresentation").style.gridTemplateColumns="repeat(17, 5.88%)";
+    document.getElementById("apresentation").style.gridTemplateRows="repeat(17, 5.88%)";
+}
+function acessar_mapa(){
+    ativaMapa();
+    for(i=posicao[0]-8;i<=posicao[0]+8;i++){
+        for(j=posicao[1]-8;j<=posicao[1]+8;j++){
+            
+            document.getElementById("apresentation").innerHTML += criaElementoDiv(i,j);
+            if(i==posicao[0] && j==posicao[1]){
+                document.getElementById(`position${i}-${j}`).classList.add("centro");
+            }
+        }
+    }
+}
+/*
+*
+*Character Functions
+*
+*/
+function ativaPersonagem(){
+    limpa_apresentation();
+    document.getElementById("apresentation").style.display="flex";
+}
+function acessar_personagem(){
+    ativaPersonagem();
 }
