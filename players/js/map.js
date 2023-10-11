@@ -1,5 +1,5 @@
 var posicao=[Number(0),Number(0)];
-
+var starting = new Audio('tracks/0_0.ogg');
 
 function configuration(){
         alert("entrando");
@@ -52,18 +52,26 @@ function criaElementoDiv(eixox,eixoy){
 function moveu_oeste(){
     limpa_apresentation();
     posicao[1]--;
+    starting.src=`tracks/${posicao[0]}_${posicao[1]}.ogg`;
+    starting.play();
 }
 function moveu_sul(){
     limpa_apresentation();
     posicao[0]++;
+    starting.src=`tracks/${posicao[0]}_${posicao[1]}.ogg`;
+    starting.play();
 }
 function moveu_norte(){
     limpa_apresentation();
     posicao[0]--;
+    starting.src=`tracks/${posicao[0]}_${posicao[1]}.ogg`;
+    starting.play();
 }
 function moveu_leste(){
     limpa_apresentation();
     posicao[1]++;
+    starting.src=`tracks/${posicao[0]}_${posicao[1]}.ogg`;
+    starting.play();
 }
 /*
 *
