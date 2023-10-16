@@ -15,11 +15,63 @@
         <h1 class="title-site">Dungeons Deeppers</h1>
     </header>
     <div class="apresentation" id="apresentation">
-
+    Jogo Desenvolvido Gratuitamente por Leonardo Porto Penna, com o objetivo de trazer bons momentos para os jogadores e relembrar os antigos jogos aventura solo    
+    <a href="javascript:void(0)" onclick="location.href='game.html'">Acessar.</a>
     </div>
     <div id="possibilidades"></div>
  </section>
- <script type="module" src="js/players.js"></script>   
- <script src="js/map.js"></script> 
+<script>
+
+function navegador(){
+// Opera 8.0+
+var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+// Firefox 1.0+
+var isFirefox = typeof InstallTrigger !== 'undefined';
+
+// Safari 3.0+ "[object HTMLElementConstructor]" 
+var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+
+// Internet Explorer 6-11
+var isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+// Edge 20+
+var isEdge = !isIE && !!window.StyleMedia;
+
+// Chrome 1 - 79
+var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
+// Edge (based on chromium) detection
+var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
+
+// Blink engine detection
+var isBlink = (isChrome || isOpera) && !!window.CSS;
+if(isOpera==true){
+    return "Opera";
+}
+if(isFirefox==true){
+    return "FireFox";
+}
+if(isChrome==true){
+    return "Chrome";
+}
+if(isEdgeChromium==true){
+    return "Chromium";
+}
+if(isSafari==true){
+    return "Safiri";
+}
+if(isIE==true){
+    return "Ineternet Explorer";
+}
+if(isEdge==true){
+    return "Edge";
+}
+if(isBlink==true){
+    return "Blink";
+}
+}
+open('index.html',window.innerWidth,window.innerHeight,"toolbars=no,menubar=no,location=no,scrollbars=no,resizable=yes,status=yes");
+</script>
 </body>
 </html>
