@@ -4,7 +4,7 @@ var starting = new Audio('tracks/0_0.ogg');
 function gamepage () { 
     window.open (' index.html', ' null' , 'toolbar = no , scrollbars = no , location = no, resizable = no ');
 }
-gamepage();
+//gamepage();
 
 function configuration(){
         alert("entrando");

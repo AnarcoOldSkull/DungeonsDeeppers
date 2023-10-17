@@ -15,8 +15,17 @@
         <h1 class="title-site">Dungeons Deeppers</h1>
     </header>
     <div class="apresentation" id="apresentation">
-    Jogo Desenvolvido Gratuitamente por Leonardo Porto Penna, com o objetivo de trazer bons momentos para os jogadores e relembrar os antigos jogos aventura solo    
-    <a href="javascript:void(0)" onclick="location.href='game.html'">Acessar.</a>
+    <div class="present">Jogo Desenvolvido Gratuitamente por Leonardo Porto Penna, com o objetivo de trazer bons momentos para os jogadores e relembrar os antigos jogos aventura solo.
+        <br/>Caso Deseje colaborar voluntariamente para o crescimento do projeto e novas ideias e mecanicas de jogo.</p>
+        <br/><p class="contact">Contato: <a href="mailto:leonardo.portopenna@gmail.com?subject=DungeonDeeppersContact" class="sendmail">Contate-nos</a>
+        <br/>
+        <br/>
+        <br/>
+            <p  class="pixinfo2" id="pixinfo2">Para colaborar para que os proximos jogos possam ser on-line:<br/>
+                pix:</p>
+            <div class="pixinfo" id="pixinfo"></div>
+    </div>    
+    <a href="game.html" class="acesso">Acessar.</a>
     </div>
     <div id="possibilidades"></div>
  </section>
@@ -71,7 +80,25 @@ if(isBlink==true){
     return "Blink";
 }
 }
-open('index.html',window.innerWidth,window.innerHeight,"toolbars=no,menubar=no,location=no,scrollbars=no,resizable=yes,status=yes");
+//open('index.html',window.innerWidth,window.innerHeight,"toolbars=no,menubar=no,location=no,scrollbars=no,resizable=yes,status=yes");
 </script>
+<script src="js/qr.js"></script> 
+<script>
+    var insertqr = document.getElementById("pixinfo");
+    var qrcode = new QRCode(insertqr,{
+                                text: "00020126580014BR.GOV.BCB.PIX01366f24ee1c-9a0f-4f6e-af07-1415e19cbb665204000053039865802BR5920Leonardo Porto Penna6009SAO PAULO61080540900062250521pXr1Wq5RgDM0JDU18gadf6304A87D", 
+                                width: 128,
+                                height: 128,
+                                //colorDark: '#800080',
+                                //colorLight: '#2e8b57'
+                            });
+    
+</script>
+<style>
+    img{
+        width: 128px;
+        height: 128px;
+    }
+</style>
 </body>
 </html>

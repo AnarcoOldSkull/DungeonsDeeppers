@@ -27,11 +27,7 @@ body{
     margin-left: 5%;
     justify-content: center;
 }
-.title-site{
-    font-family: 'Dancing Script';
-    font-size: 8em;
-    color: var(--primary);;
-}
+
 .lateral{
     display: inline-flex;
     position:absolute;
@@ -68,6 +64,7 @@ img ~ a.config:hover{
     color: var(--primary);
     justify-content: center;
     text-align: center;
+    flex-wrap: wrap;
     font-size: 1.4em;
     top: 20vh;
     width: 80vw;
@@ -76,18 +73,66 @@ img ~ a.config:hover{
     border: solid 3px var(--primary);
 }
 #possibilidades{
-    display: grid;
+    display: flex;
     position: absolute;
     color: var(--primary);
-    grid-template-areas: " w w "
-                         " a d "                        
-                         " a d "                        
-                         " s s ";
     top: 80vh;
     width: 80vw;
     height: 15%;
     margin-left: 5%;
     border: solid 3px var(--primary);
+}
+#west{
+    display: flex;
+    width: 33.33%;
+    height: 95%;
+    float: left;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    border: solid 3px var(--secundary);
+    border-radius: 10px;
+    color: var(--secundary);
+}
+#east{
+    display: flex;
+    width: 33.33%;
+    height: 95%;
+    float: right;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    border: solid 3px var(--secundary);
+    border-radius: 10px;
+    color: var(--secundary);
+}
+#north{
+    display: flex;
+    width: 33.33%;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    background: var(--primary);
+    border: solid 3px var(--secundary);
+    border-radius: 10px;
+    color: var(--secundary);
+    
+}
+
+#south{
+    display: flex;
+    width: 33.33%;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    background: var(--primary);
+    border: solid 3px var(--secundary);
+    border-radius: 10px;
+    color: var(--secundary);
 }
 .grindando{
     display: grid;
@@ -97,4 +142,86 @@ img ~ a.config:hover{
 .centro{
     border: solid 3px orange;
     color: orange;
+}
+.acesso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: var(--primary);
+    color: var(--secundary);
+    border-radius: 5px;
+    width: 100%;
+    height: 10%;
+}
+.present{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 90%;
+}
+.sendmail{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background: var(--primary);
+    color: var(--secundary);
+    border-radius: 5px;
+    width: 25%;
+    height: 100%;
+    padding-top: 3%;
+    text-decoration: none;
+}
+
+.contact{
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    width: 100%;
+    height: 10%;
+}
+.pixinfo, .pixinfo2{
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    width: 50%;
+    height: 10%;
+}
+@media (max-width: 480px) and (min-width: 360px){
+    .title-site{
+        font-family: 'Dancing Script';
+        font-size: 2em;
+        color: var(--primary);;
+    }
+}
+@media (max-width: 640px) and (min-width: 481px){
+    .title-site{
+        font-family: 'Dancing Script';
+        font-size: 3.2em;
+        color: var(--primary);;
+    }
+}
+@media (max-width: 800px) and (min-width: 641px){
+    .title-site{
+        font-family: 'Dancing Script';
+        font-size: 4em;
+        color: var(--primary);;
+    }
+}
+@media (max-width: 1200px) and (min-width: 801px){
+    .title-site{
+        font-family: 'Dancing Script';
+        font-size: 5.6em;
+        color: var(--primary);;
+    }
+}
+@media (min-width: 1201px){
+    .title-site{
+        font-family: 'Dancing Script';
+        font-size: 8em;
+        color: var(--primary);;
+    }
 }
