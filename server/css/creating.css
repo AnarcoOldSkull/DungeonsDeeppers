@@ -78,31 +78,32 @@ img ~ a.config:hover{
     top: 6%;
     margin: 3%;
 }
-#projeto{
+#executandoProjeto{
     position: absolute;
+    display: block;
+    width: 100%;
+    top: 3%;
+    height: 5%;
+}
+#projeto, #nomearProjeto{
     display: inline-block;
     width: 60%;
-    top: 3%;
-    height: 4%;
-    margin-left: 3%;
+    height: 100%;
 }
 #novoprojeto{
-    position: absolute;
     display: inline-block;
     width: 10%;
-    top: 3%;
     left: 83%;
     background: var(--primary);
-    height: 5%;
+    height: 100%;
     color: var(--secundary);
     border: solid 3px var(--secundary);
     border-radius: 10px;
+    height: 100%;
 }
 #forprojeto{
-    position: absolute;
     display: inline-block;
     width: 20%;
-    top: 3%;
     left: 3%;
     text-align: left;
 }
