@@ -8,16 +8,15 @@ var conteudinho = await fetch('log/event.json')
 
 function insertConteudo(dados){
  document.getElementById("apresentation").innerHTML = dados.descricao;
- document.getElementById("possibilidades").innerHTML += `<div id="west">${dados.a}</div>`;
- 
- document.getElementById("possibilidades").innerHTML += `<div id="north">${dados.w}</div>`;
- 
- document.getElementById("possibilidades").innerHTML += `<div id="division"></div>`;
- 
- document.getElementById("possibilidades").innerHTML += `<div id="south">${dados.s}</div>`;
- 
- document.getElementById("possibilidades").innerHTML += `<div id="east">${dados.d}</div>`;
- starting.play();
+ document.getElementById("possibilidades").innerHTML += `<div id="west"><button id="bwest" onclick="moveu_oeste()">${dados.a}</button></div>
+                                                         <div id="division">
+                                                         <div id="cocontainer">
+                                                         <div id="north"><button id="bnorth" onclick="moveu_norte()">${dados.w}</button></div>
+                                                         <div id="south"><button id="bsouth" onclick="moveu_sul()">${dados.s}</button></div>
+                                                         </div>
+                                                         </div>
+                                                         <div id="east"><button  id="beast" onclick="moveu_leste()">${dados.d}</button></div>`;
+ //starting.play();
 }
 
 insertConteudo(conteudinho);

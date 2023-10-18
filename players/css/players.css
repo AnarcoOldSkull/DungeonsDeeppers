@@ -90,10 +90,7 @@ img ~ a.config:hover{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: var(--primary);
-    border: solid 3px var(--secundary);
-    border-radius: 10px;
-    color: var(--secundary);
+    margin-top: 3px
 }
 #east{
     display: flex;
@@ -103,36 +100,67 @@ img ~ a.config:hover{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: var(--primary);
-    border: solid 3px var(--secundary);
-    border-radius: 10px;
-    color: var(--secundary);
+    margin-top: 3px
 }
 #north{
-    display: flex;
-    width: 33.33%;
-    height: 40%;
-    justify-content: center;
+    display: block !important;
+    width: fill;
+    height: 49%;
+    text-align: center;
     align-items: center;
-    flex-flow: wrap;
-    background: var(--primary);
-    border: solid 3px var(--secundary);
-    border-radius: 10px;
-    color: var(--secundary);
-    
+    flex-flow: wrap;   
 }
 
 #south{
-    display: flex;
-    width: 33.33%;
-    height: 40%;
-    justify-content: center;
-    align-items: center;
+    display: block !important;
+    width: fill;
+    height: 49%;
+    text-align: center;
+    vertical-align: middle;
     flex-flow: wrap;
+}
+#bwest{
+    width: 100%;
+    height: 100%;
     background: var(--primary);
     border: solid 3px var(--secundary);
     border-radius: 10px;
     color: var(--secundary);
+}
+#bnorth{
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    border: solid 3px var(--secundary);
+    border-radius: 10px;
+    color: var(--secundary);
+}
+#bsouth{
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    border: solid 3px var(--secundary);
+    border-radius: 10px;
+    color: var(--secundary);
+
+}
+#beast{
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    border: solid 3px var(--secundary);
+    border-radius: 10px;
+    color: var(--secundary);
+
+}
+#division{
+    display: flex;
+    width: 33.33%;
+    margin-top: 3px
+}
+#cocontainer{
+    display: block;
+    width: 100% !important;
 }
 .grindando{
     display: grid;
