@@ -1,0 +1,12 @@
+{
+  "name": "dungeonsdeeppers",
+  "version": "1.0.0",
+  "description": "Just a new repository to try to create a plataform to aply games!!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
