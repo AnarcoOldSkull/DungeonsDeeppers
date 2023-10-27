@@ -16,7 +16,7 @@ function insertConteudo(dados){
                                                          </div>
                                                          </div>
                                                          <div id="east"><button  id="beast" onclick="moveu_leste()">${dados.d}</button></div>`;
- //starting.play();
+ starting.play();
 }
 
 insertConteudo(conteudinho);

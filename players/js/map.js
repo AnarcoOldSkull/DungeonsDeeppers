@@ -1,13 +1,8 @@
 var posicao=[Number(0),Number(0)];
 var starting = new Audio('tracks/0_0.ogg');
 
-function gamepage () { 
-    window.open (' index.html', ' null' , 'toolbar = no , scrollbars = no , location = no, resizable = no ');
-}
-//gamepage();
-
 function configuration(){
-        alert("entrando");
+        document.getElementById("config_content");
 }
 /*
 *
